@@ -17,9 +17,9 @@ module mult_1 (
 
   // Add extra bit to perform signed multiplication
   assign mult_1_internal = signed'({1'b0, x2_fxd}) * b;
-  // Allign: -(X_J) sign extension at the beginning and mult_1_internal from MSB-1
+  // Allign: -(X_J+1) sign extension at the beginning and mult_1_internal from MSB-1
   // to T1_W+X2_J
-  assign t1_fxd = {{(-X2_J){mult_1_internal[M1_W-2]}}, mult_1_internal[M1_W-2-:(T1_W+X2_J)]};
+  assign t1_fxd = {{(-X2_J+1){mult_1_internal[M1_W-2]}}, mult_1_internal[M1_W-2-:(T1_W+X2_J)]};
 
 endmodule  // mult_1
 

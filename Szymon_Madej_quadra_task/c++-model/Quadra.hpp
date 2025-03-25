@@ -62,24 +62,24 @@ typedef ac_fixed<X2_W, X2_J, false, trn, AC_WRAP> x2_fxd_t; // u0.17
 
 // Coefficients:
 // a:
-const int A_I =  4;  // <optimize>
-const int A_F = 28;  // <optimize>
+const int A_I =  2;  // <optimize>
+const int A_F = 19;  // <optimize>
 const int A_W = A_I + A_F;
 
 typedef ac_int  < A_W,       true>               a_int_t;
 typedef ac_fixed< A_W,  A_I, true, rdz, AC_WRAP> a_fxd_t;
 
 // b:
-const int B_I =  4;  // <optimize>
-const int B_F = 28;  // <optimize>
+const int B_I =  3;  // <optimize>
+const int B_F = 19;  // <optimize>
 const int B_W = B_I + B_F;
 
 typedef ac_int  < B_W,       true>               b_int_t;
 typedef ac_fixed< B_W,  B_I, true, rdz, AC_WRAP> b_fxd_t;
 
 // c:
-const int C_I =  4;  // <optimize>
-const int C_F = 28;  // <optimize>
+const int C_I =  2;  // <optimize>
+const int C_F = 19;  // <optimize>
 const int C_W = C_I + C_F;
 
 typedef ac_int  < C_W,       true>               c_int_t;
@@ -99,7 +99,7 @@ typedef ac_fixed<Y_W, Y_I, true, trn, AC_WRAP> y_fxd_t; // (truncate)
 // --------------------------------------------------------------------------------
 
 // extra working fractional bits to be rounded off at the end
-const int R_F = 4;
+const int R_F = 0;
 
 const int S_I = Y_I;
 const int S_F = Y_F + R_F;  // (4 extra fractional bits to be rounded)
@@ -113,7 +113,7 @@ const int SQ_I = X2_I + X2_I;
 #ifdef FULL_PRECISION
 const int SQ_F = X2_F + X2_F;
 #else
-const int SQ_F = 24;
+const int SQ_F = 19;
 #endif
 const int SQ_W = SQ_I + SQ_F;
 

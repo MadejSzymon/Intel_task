@@ -59,7 +59,7 @@ localparam int A_W = A_I + A_F;
 typedef logic signed [A_W-1:0] a_fxd_t;
 
 // b:
-localparam int B_I =  2;  // <optimize>
+localparam int B_I =  3;  // <optimize>
 localparam int B_F = 19;  // <optimize>
 localparam int B_W = B_I + B_F;
 
